@@ -47,7 +47,7 @@ jobs:
       ###########################
       #          Upload         #
       ###########################
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
@@ -71,7 +71,7 @@ jobs:
       #  Download iOS Artifact  #
       ###########################
       - name: Download iOS Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
